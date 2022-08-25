@@ -10,7 +10,7 @@
 * [Questions](#questions)
 
 ## Description
-This is a simple To-Do List built with React.js. 
+This is a simple To-Do List built with React.js that utilizes local storage to create a to-do list for the user. 
 
 ## Screenshots
 Empty To-Do List
