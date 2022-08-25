@@ -13,7 +13,11 @@
 This is a simple To-Do List built with React.js. 
 
 ## Screenshots
+Empty To-Do List
+![Empty](./assets/images/Empty.jpg)
 
+Full To-Do List
+![Full](./assets/images/full.jpg)
 
 ## Technologies
 This application is written with React (as well as all of the dependencies found in the package.json files).
