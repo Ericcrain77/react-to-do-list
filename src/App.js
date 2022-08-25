@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
+import './app.css';
 import ToDoList from './compenents/ToDoList';
-import { v4 as uuidv4, v4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid';
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos'
 
@@ -10,7 +11,7 @@ function App() {
 
   useEffect(() => {
     const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
-    if (storedTodos) setTodos(storedTodos)
+    if (storedTodos) setTodos( prevTodos => [...prevTodos, ...storedTodos] );
   }, []);
 
   useEffect(() => {
@@ -28,7 +29,7 @@ function App() {
     const name = todoName.current.value
     if (name === '') return;
     setTodos(prevTodos => {
-      return [...prevTodos, { id: v4(), name: name, complete: false }]
+      return [...prevTodos, { id: uuidv4(), name: name, complete: false }]
     })
     todoName.current.value = null
   }
@@ -39,13 +40,13 @@ function App() {
   }
 
   return (
-    <>
-      <div>{todos.filter(todo => !todo.complete).length} items left!</div>
-      <input ref={todoName} type="text" />
-      <button onClick={handleAddItem}>Add Item</button>
-      <button onClick={handleDeleteItem}>Delete Checked-off Items</button>
+    <div className='container'>
+      <div className='items-left'>{todos.filter(todo => !todo.complete).length} items left!</div>
+      <input ref={todoName} type="text" className='items-input' />
+      <button onClick={handleAddItem} className='btn'>Add Item</button>
+      <button onClick={handleDeleteItem} className='btn'>Delete Checked-off Items</button>
       <ToDoList todos={todos} toggleTodo={toggleTodo} />
-    </>
+    </div>
   );
 }
 

@@ -6,10 +6,10 @@ export default function ToDos({ todo, toggleTodo }) {
     }
     
   return (
-    <div>
+    <div className='list'>
         <label>
-            <input type="checkbox" checked={todo.complete} onChange={handleTodoCheck} />
-            {todo.name}
+          <input type="checkbox" checked={todo.complete} onChange={handleTodoCheck} className='checkbox' />
+          {todo.name}
         </label>
     </div>
   )

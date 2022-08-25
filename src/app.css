@@ -1,0 +1,118 @@
+:root {
+    --react-black: #292C33;
+    --react-blue: #80D8F7;
+    --dark-blue: #408AA3;
+    --light-gray: #EDE0E7;
+    --black: #000000;
+    --white: #FFFFFF;
+}
+  
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: var(--react-black);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+
+.items-left {
+    color: var(--white);
+    font-size: 3rem;
+    margin: 5rem auto 1rem auto;
+}
+
+.items-input {
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    width: 50%;
+    height: 2rem;
+    margin: 1rem auto 1rem auto;
+    font-size: larger;
+    border: none;
+    box-shadow: 2px 2px 8px var(--black);
+}
+
+.items-input:focus {
+    background-color: var(--white);
+    padding: .25rem;
+    outline: none;
+}
+
+.btn {
+    background-color: var(--react-blue);
+    width: 30%;
+    font-size: larger;
+    font-weight: 700;
+    color: var(--react-black);
+    padding: .5rem;
+    border-radius: 8px;
+    margin: 1rem auto 1rem auto;
+    box-shadow: 1px 1px 8px var(--black);
+    border: none;
+}
+
+.btn:active {
+    background-color: var(--dark-blue);
+}
+
+.list {
+    display: flex;
+    width: 75%;
+    margin: 2.5rem auto 0 auto;
+    font-size: 1.75rem;
+    color: var(--white);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.checkbox {
+    accent-color: var(--react-blue);
+    cursor: pointer;
+    margin-right: 1.5rem;
+}
+
+input[type=checkbox] {
+    transform: scale(2);
+}
+
+@media screen and (max-width: 1023px) {
+    .items-input {
+        width: 70%;
+    }
+    .btn {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 613px) {
+    .items-input {
+        width: 90%;
+        font-size: 1rem;
+    }
+    .btn {
+        width: 70%;
+    }
+    .list {
+        font-size: 1.25rem;
+    }
+    input[type=checkbox] {
+        transform: scale(1.5);
+    }
+}
+
+@media screen and (max-width: 438px) {
+    .items-input {
+        width: 100%;
+    }
+    .btn {
+        width: 100%;
+    }
+}
