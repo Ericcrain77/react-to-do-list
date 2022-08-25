@@ -14,9 +14,11 @@ This is a simple To-Do List built with React.js.
 
 ## Screenshots
 Empty To-Do List
+
 ![Empty](./assets/images/Empty.jpg)
 
 Full To-Do List
+
 ![Full](./assets/images/Full.jpg)
 
 ## Technologies
